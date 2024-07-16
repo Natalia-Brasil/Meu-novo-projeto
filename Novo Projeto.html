@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+     <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Senha e Usuário </title>
+        <!--CSS  do projeto -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <!-- Font Awesome -->
+        <link rel="stylelesheet" 
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- JS do projeto -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+       
+       
+    <style>
+        *{margin:0;
+        padding:0;
+        box-sizing:border-box;}
+
+        body{ background-color:rgb(2, 80, 44);}
+
+
+       form{ background-color: white;
+            border-radius: 40px;
+            max-width: 500px;
+            width:60%;
+            padding: 30px;
+            position: absolute; 
+            left: 50%;
+            top:50%;
+        transform: translate(-50%,-50%);
+    }
+
+        form h3 {
+            text-align:center;
+            color:rgb(2, 80, 44);
+             font-family:'lucida sans''Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+        form input[type=text],
+        form input[ type=password]
+            {width:100%;
+            height: 45px;
+            border:1px solid#ccc;
+            padding-left: 10px; 
+            margin:10px 0;}
+
+        form input[type=submit]
+             {width:100%;
+                height: 40px; 
+                cursor:pointer;
+                background:rgb(2, 80, 44);
+                color:white;
+                border:0;
+                border-radius: 20px;
+                transition: 1s;
+            }
+        form input[type=submit]:hover{
+            background-color:rgb(2, 80, 44);}
+        
+    </style>
+
+
+    <body>
+        <form>
+            <h1 style="color:#024e35;font-size:26px;font-size:verdana">Centro Educacional Benedito Gomes</h1>
+            <input type="text" name="usuário" placeholder="usuário" class="form-control" id="usuário"/>
+            <input type="password" name="senha" placeholder="senha" class="form-control" id="senha"/>
+            <input type="submit"  onclick="logar(); return false"/>
+            
+        </form>
+
+        <script> 
+               function logar (){
+
+                 var usuário = document.getElementById('usuário').value;
+                 var senha = document.getElementById('senha').value;
+
+                 if(usuário == "Benedito Gomes" && senha == "beneditogomes"){ location.href = "itens.html";
+                }
+                 else{alert( 'usuários ou senha incorretos');}  }
+         </script>
+
+    </body>
+
+    </html>
